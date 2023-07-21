@@ -10,13 +10,13 @@ function App() {
     array.map((el) => {
       console.log(el.name);
       return (
-        <p
+        <span
           className="user-issue"
           style={{ backgroundColor: `#${el.color}` }}
           key={el.id}
         >
           {el.name}
-        </p>
+        </span>
       );
     });
 

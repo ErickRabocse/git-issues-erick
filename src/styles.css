@@ -111,15 +111,17 @@ tbody tr:nth-child(even) {
 }
 
 .user_labels {
-  width: auto;
-  font-weight: bold;
+  font-weight: 300px;
 }
 
 .user-issue {
+  margin: 2px auto;
+  text-align: center;
   border-radius: 10px;
   border: 1px solid white;
-  padding: 3px;
-  margin-bottom: 2px;
+  padding: 4px;
+  display: inline-block;
+  /* margin-bottom: 2px; */
 }
 
 /* SEARCH */
