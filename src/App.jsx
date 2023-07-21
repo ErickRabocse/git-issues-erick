@@ -35,7 +35,7 @@ function App() {
         <img
           src={reactLogo}
           alt="react icon"
-          width={"40px"}
+          width={"60px"}
           className="header_logo"
         />
         <div className="search-bar">

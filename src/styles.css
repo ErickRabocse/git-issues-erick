@@ -35,7 +35,7 @@ body {
 .header {
   background-color: var(--grey);
   color: white;
-  height: 50px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,4 +129,5 @@ tbody tr:nth-child(even) {
   justify-content: center;
   align-items: center;
   margin-right: 20px;
+  padding: 5px;
 }
