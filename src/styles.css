@@ -112,7 +112,14 @@ tbody tr:nth-child(even) {
 
 .user_labels {
   width: auto;
-  color: goldenrod;
+  font-weight: bold;
+}
+
+.user-issue {
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 3px;
+  margin-bottom: 2px;
 }
 
 /* SEARCH */

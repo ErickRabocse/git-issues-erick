@@ -1,18 +1,24 @@
 import { useState, useEffect } from "react";
 import UserRows from "./UserRows";
-// import SearchBar from "./SearchBar";
 import reactLogo from "./assets/science.png";
 
 function App() {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
 
-  const loopingLabels = (array) => {
+  const loopingLabels = (array) =>
     array.map((el) => {
       console.log(el.name);
-      return el.name;
+      return (
+        <p
+          className="user-issue"
+          style={{ backgroundColor: `#${el.color}` }}
+          key={el.id}
+        >
+          {el.name}
+        </p>
+      );
     });
-  };
 
   useEffect(() => {
     fetch("https://api.github.com/repos/facebook/react/issues")
@@ -23,29 +29,6 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
 
-  // const sendSearch = (search) => {
-  //   users
-  //     .filter((post) => {
-  //       if (search === "") {
-  //         console.log("Nothing was searched");
-  //         return post;
-  //       } else if (post.title.toLowerCase().includes(search.toLowerCase())) {
-  //         return post;
-  //       }
-  //     })
-  //     // I DON'T KNOW IF I'M USING THE MAP FN CORRECTLY
-  //     .map((post) => {
-  //       <UserRows
-  //         key={post.id}
-  //         usuario={post.user.login}
-  //         id={post.id}
-  //         title={post.title}
-  //         link={post.html_url}
-  //         // labels={user.labels}
-  //       />;
-  //     });
-  // };
-
   return (
     <>
       <section className="header">
@@ -55,7 +38,6 @@ function App() {
           width={"40px"}
           className="header_logo"
         />
-        {/* <SearchBar handleSearch={sendSearch} /> */}
         <div className="search-bar">
           <input
             className="search-input"
@@ -64,9 +46,6 @@ function App() {
             onChange={(e) => setSearch(e.target.value)}
             value={search}
           />
-          {/* <button className="search-button" onClick={() => sendSearch(search)}>
-            Search
-          </button> */}
         </div>
       </section>
 
